@@ -60,7 +60,7 @@ public class PlotActivity extends AppCompatActivity implements Reciever.OnMyActi
         client = ActivityRecognition.getClient(this);
         Intent intent = new Intent(this, HandleDataIntentService.class);
         pending = PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        Task task = client.requestActivityUpdates(10000, pending);
+        Task task = client.requestActivityUpdates(30000, pending);
         PixelUtils.init(this);
 
 
